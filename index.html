@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>The Bigz Crochet | Kedai Kraftangan Rajutan Eksklusif</title>
+  <meta name="description" content="Koleksi kraftangan rajutan buatan tangan eksklusif - beg tote daisy, boneka amigurumi, topi bucket, dan aksesori comel 100% benang kapas berkualiti.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧶</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, Material Symbols Outlined -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#006c49',
+            'primary-container': '#10b981',
+            'primary-dark': '#059669',
+            'primary-focus': '#047857',
+            'background': '#f9f9f6',
+            'background-alt': '#f4f8f5',
+            'surface': '#f9f9f6',
+            'surface-card': '#ffffff',
+            'surface-container-low': '#f4f4f1',
+            'surface-container': '#eeeeeb',
+            'secondary-container': '#d3e3dc',
+            'tertiary-container': '#e29100',
+            'text-primary': '#1e293b',
+            'text-secondary': '#64748b',
+            'text-tertiary': '#94a3b8',
+            'border-subtle': '#e2e8f0',
+            'badge-notification': '#ef4444'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Pustaka PDF, QR Code & Graf Analitik -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- Google Identity Services (Google OAuth 2.0) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-background text-text-primary min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-white">
+
+  <!-- ===================================================================== -->
+  <!-- 1. VIEW: SPLASH / HERO ONBOARDING (Mobile App Screen)                 -->
+  <!-- ===================================================================== -->
+  <section id="view-splash" class="flex-1 w-full flex flex-col justify-between max-w-md mx-auto p-5 pt-safe pb-safe min-h-screen relative overflow-hidden">
+    <!-- Ambient Botanical Glows -->
+    <div class="absolute -top-16 -right-16 w-64 h-64 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-20 w-56 h-56 bg-secondary-container/25 rounded-full blur-2xl pointer-events-none"></div>
+
+    <!-- Top Header Branding -->
+    <header class="w-full flex items-center justify-between z-10 pt-3">
+      <div class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary">
+          <span class="material-symbols-outlined text-[24px] fill">eco</span>
+        </div>
+        <div>
+          <span class="font-extrabold text-[18px] text-text-primary tracking-tight block">The Bigz Crochet</span>
+          <span class="text-[11px] text-text-secondary">Artisan Handmade Crafts</span>
+        </div>
+      </div>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 shadow-sm backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+        <span class="font-semibold text-primary text-[11.5px]">Handcrafted</span>
+      </div>
+    </header>
+
+    <!-- Main Showcase Card -->
+    <div class="w-full flex flex-col gap-4 z-10 my-auto py-4">
+      <div class="card-soft p-4 flex flex-col overflow-hidden relative">
+        <div class="relative w-full h-[260px] rounded-[20px] overflow-hidden bg-surface-container-low shadow-inner">
+          <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80" 
+               alt="Crochet Hero Collection" 
+               class="w-full h-full object-cover">
+          <!-- Floating Badges -->
+          <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-primary text-[15px] fill">favorite</span>
+            <span class="text-[11px] font-bold text-text-primary">100% Milk Cotton</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-tertiary-container text-[15px] fill">verified</span>
+            <span class="text-[11px] font-bold text-text-primary">Custom Made</span>
+          </div>
+        </div>
+
+        <!-- 3 Feature Chips -->
+        <div class="grid grid-cols-3 gap-2 mt-3.5">
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-background-alt text-center">
+            <span class="material-symbols-outlined text-primary text-[18px]">nest_eco_leaf</span>
+            <span class="text-[10.5px] font-bold text-text-primary mt-0.5">Eco Friendly</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-background-alt text-center">
+            <span class="material-symbols-outlined text-primary text-[18px]">wash</span>
+            <span class="text-[10.5px] font-bold text-text-primary mt-0.5">Hand Washable</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2 rounded-2xl bg-background-alt text-center">
+            <span class="material-symbols-outlined text-primary text-[18px]">local_shipping</span>
+            <span class="text-[10.5px] font-bold text-text-primary mt-0.5">Express Post</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="flex flex-col text-center px-2 mt-1">
+        <h1 class="text-[26px] font-extrabold text-text-primary leading-tight tracking-tight">
+          Kraftangan Rajutan Unik <br>
+          <span class="text-primary-container">Dihantar Terus ke Rumah Anda</span>
+        </h1>
+        <p class="text-[13px] text-text-secondary mt-2 leading-relaxed">
+          Terokai beg tote daisy buatan tangan, boneka amigurumi comel, dan aksesori eksklusif yang dikait dengan penuh kasih sayang.
+        </p>
+      </div>
+    </div>
+
+    <!-- Action Section -->
+    <div class="w-full flex flex-col items-center gap-3 z-10 pb-4">
+      <button onclick="switchView('catalog')" 
+              class="w-full h-14 rounded-full bg-primary-container text-white font-bold text-[15px] flex items-center justify-center gap-2 shadow-[0_6px_20px_rgba(16,185,129,0.35)] hover:bg-primary-dark active:scale-95 transition-all">
+        <span>Mula Membeli Sekarang</span>
+        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+      </button>
+
+      <div class="flex items-center gap-2 text-[11px] text-text-secondary">
+        <div class="flex -space-x-1.5 overflow-hidden">
+          <img class="inline-block h-5 w-5 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+          <img class="inline-block h-5 w-5 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+          <img class="inline-block h-5 w-5 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+        </div>
+        <span>Disukai oleh 1,000+ peminat kraftangan crochet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 2. VIEW: KATALOG STORE UTAMA (Mobile & Desktop Responsive)            -->
+  <!-- ===================================================================== -->
+  <section id="view-catalog" class="hidden flex-1 w-full max-w-5xl mx-auto flex flex-col pb-28">
+    <!-- Top Sticky Header Bar -->
+    <header class="sticky top-0 inset-x-0 z-40 bg-surface/90 backdrop-blur-xl border-b border-border-subtle/80 pt-safe">
+      <div class="h-16 px-4 md:px-6 flex items-center justify-between">
+        <div class="flex items-center gap-2.5 cursor-pointer" onclick="switchView('splash')">
+          <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-white shadow-sm">
+            <span class="material-symbols-outlined text-[20px] fill">eco</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-[16px] text-text-primary tracking-tight leading-none">The Bigz Crochet</span>
+            <span class="text-[11px] text-text-secondary mt-0.5">Katalog Kraftangan Rasmi</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Butang Carian Pesanan Saya -->
+          <button onclick="switchView('orders')" 
+                  aria-label="Semak Pesanan" 
+                  title="Semak Pesanan Saya"
+                  class="w-10 h-10 flex items-center justify-center rounded-full text-text-secondary hover:bg-surface-container active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[22px]">receipt_long</span>
+          </button>
+
+          <!-- Admin Portal Shortcut -->
+          <button onclick="switchView('admin_login')" 
+                  aria-label="Akses Admin" 
+                  title="Panel Admin"
+                  class="w-10 h-10 flex items-center justify-center rounded-full text-text-secondary hover:bg-surface-container active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[22px]">admin_panel_settings</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Wrapper -->
+    <main class="flex-1 w-full px-4 md:px-6 pt-3 flex flex-col gap-4">
+      <!-- Location & Delivery Pill -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[16px]">location_on</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-[10px] font-bold text-text-secondary uppercase tracking-wider">Hantar Ke</span>
+            <span class="text-[13px] font-semibold text-text-primary flex items-center gap-0.5">
+              Seluruh Malaysia • Pos Laju / J&T
+            </span>
+          </div>
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/70 text-primary text-[11px] font-bold">
+          <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+          Ready & Custom Made
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative flex items-center">
+        <span class="material-symbols-outlined absolute left-3.5 text-text-tertiary text-[20px] pointer-events-none">search</span>
+        <input id="catalog-search-input" 
+               type="text" 
+               placeholder="Cari beg daisy, arnab comel, topi bucket..." 
+               class="w-full h-12 pl-10 pr-10 bg-white rounded-full text-[13.5px] text-text-primary placeholder:text-text-tertiary shadow-[0_2px_12px_rgba(30,41,59,0.04)] border border-border-subtle focus:outline-none focus:ring-2 focus:ring-primary-container transition-all">
+        <button onclick="resetCatalogFilter()" class="absolute right-3 text-text-tertiary hover:text-text-primary p-1">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Festive Promo Hero Banner -->
+      <div class="relative overflow-hidden rounded-[24px] bg-gradient-to-br from-secondary-container via-surface-container-low to-primary-container/20 p-5 shadow-[0_4px_20px_-4px_rgba(16,185,129,0.12)]">
+        <div class="relative z-10 max-w-xs">
+          <span class="inline-block px-2.5 py-0.5 rounded-full bg-white/90 text-primary font-bold text-[10px] uppercase tracking-wider mb-2">
+            Tawaran Istimewa
+          </span>
+          <h2 class="text-[18px] md:text-[22px] font-extrabold text-text-primary leading-tight">
+            Koleksi Rajutan Bunga Daisy <br>
+            <span class="text-primary-dark">Diskaun Sehingga 25%</span>
+          </h2>
+          <p class="text-[12px] text-text-secondary mt-1">Gunakan kod promosi <span class="font-bold text-text-primary">BIGZ10</span> di troli untuk potongan RM10!</p>
+        </div>
+        <div class="absolute right-3 -bottom-4 text-primary-dark/15 pointer-events-none select-none">
+          <span class="material-symbols-outlined text-[100px] leading-none">all_inclusive</span>
+        </div>
+      </div>
+
+      <!-- Horizontal Category Chips -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+        <button onclick="selectCategory('All')" 
+                data-category="All" 
+                class="category-chip shrink-0 px-4 py-2 rounded-full text-xs font-bold bg-primary-container text-white shadow-sm border border-transparent transition-all">
+          Semua Item
+        </button>
+        <button onclick="selectCategory('Bags')" 
+                data-category="Bags" 
+                class="category-chip shrink-0 px-4 py-2 rounded-full text-xs font-bold bg-white text-text-primary border border-border-subtle hover:border-primary-container transition-all">
+          👜 Beg & Clutch
+        </button>
+        <button onclick="selectCategory('Amigurumi')" 
+                data-category="Amigurumi" 
+                class="category-chip shrink-0 px-4 py-2 rounded-full text-xs font-bold bg-white text-text-primary border border-border-subtle hover:border-primary-container transition-all">
+          🐰 Amigurumi & Boneka
+        </button>
+        <button onclick="selectCategory('Wearables')" 
+                data-category="Wearables" 
+                class="category-chip shrink-0 px-4 py-2 rounded-full text-xs font-bold bg-white text-text-primary border border-border-subtle hover:border-primary-container transition-all">
+          👒 Topi & Pakaian
+        </button>
+        <button onclick="selectCategory('Accessories')" 
+                data-category="Accessories" 
+                class="category-chip shrink-0 px-4 py-2 rounded-full text-xs font-bold bg-white text-text-primary border border-border-subtle hover:border-primary-container transition-all">
+          🌸 Keychain & Coaster
+        </button>
+      </div>
+
+      <!-- Section Title -->
+      <div class="flex items-center justify-between pt-1">
+        <h3 class="font-extrabold text-[16px] text-text-primary flex items-center gap-1.5">
+          <span>Koleksi Kraftangan Rajutan</span>
+        </h3>
+        <span class="text-[12px] text-text-secondary">Pilih & tempah terus</span>
+      </div>
+
+      <!-- Products Grid (2 Columns Mobile, 3-4 Columns Desktop) -->
+      <div id="products-grid-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-5">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </main>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. VIEW: SEMAKAN STATUS PESANAN PELANGGAN                             -->
+  <!-- ===================================================================== -->
+  <section id="view-orders" class="hidden flex-1 w-full max-w-2xl mx-auto flex flex-col p-4 md:p-6 pb-28">
+    <header class="flex items-center gap-3 pb-4 border-b border-border-subtle pt-safe">
+      <button onclick="switchView('catalog')" class="w-9 h-9 rounded-full bg-white shadow-sm flex items-center justify-center text-text-secondary hover:text-text-primary">
+        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+      </button>
+      <div>
+        <h2 class="font-extrabold text-[18px] text-text-primary">Semakan Status Pesanan</h2>
+        <p class="text-[11.5px] text-text-secondary">Semak status terkini & muat turun resit invois PDF anda</p>
+      </div>
+    </header>
+
+    <div class="mt-5 flex flex-col gap-4">
+      <div class="card-soft p-4 flex flex-col gap-3">
+        <label for="track-order-input" class="text-xs font-bold text-text-primary">Nombor Pesanan (Order ID) atau No. WhatsApp:</label>
+        <div class="flex gap-2">
+          <input id="track-order-input" 
+                 type="text" 
+                 placeholder="Contoh: TBC-202611-008" 
+                 class="flex-1 h-11 px-3.5 bg-background-alt rounded-xl text-xs border border-border-subtle focus:outline-none focus:ring-2 focus:ring-primary-container">
+          <button onclick="trackCustomerOrder()" class="px-5 h-11 rounded-xl bg-primary-container text-white font-bold text-xs flex items-center gap-1 shadow-sm hover:bg-primary-dark">
+            <span class="material-symbols-outlined text-[18px]">search</span>
+            <span>Semak</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Container Hasil Carian Pesanan -->
+      <div id="track-order-result" class="flex flex-col gap-3">
+        <!-- Hasil carian disuntik di sini oleh app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. VIEW: ADMIN LOGIN (Google OAuth + Hidden Emergency Backdoor)        -->
+  <!-- ===================================================================== -->
+  <section id="view-admin_login" class="hidden flex-1 w-full flex items-center justify-center p-5 min-h-screen">
+    <div class="card-soft w-full max-w-md p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden">
+      <!-- Back button -->
+      <button onclick="switchView('catalog')" class="absolute top-4 left-4 text-text-secondary hover:text-text-primary flex items-center gap-1 text-xs">
+        <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+        <span>Ke Kedai</span>
+      </button>
+
+      <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-white mb-3 shadow-md mt-4">
+        <span class="material-symbols-outlined text-[30px] fill">admin_panel_settings</span>
+      </div>
+
+      <h2 class="font-extrabold text-[20px] text-text-primary">Portal Admin</h2>
+      <p class="text-[12px] text-text-secondary mt-1 max-w-xs">Pengurusan inventori produk, verifikasi bukti pembayaran, dan statistik jualan The Bigz Crochet.</p>
+
+      <!-- Google OAuth Section -->
+      <div class="w-full mt-6 flex flex-col items-center">
+        <div id="g_id_onload"
+             data-client_id=""
+             data-context="signin"
+             data-ux_mode="popup"
+             data-callback="handleGoogleLoginCallback"
+             data-auto_prompt="false">
+        </div>
+
+        <button onclick="showToast('Sila gunakan Kunci Sandi Darurat (Emergency Backdoor) untuk akses demo.', 'info')" 
+                class="w-full h-12 rounded-xl border border-border-subtle bg-white hover:bg-slate-50 flex items-center justify-center gap-3 font-semibold text-xs text-text-primary shadow-sm transition-all">
+          <svg class="w-5 h-5" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Log Masuk dengan Google OAuth 2.0</span>
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full flex items-center my-5">
+        <div class="flex-1 border-t border-border-subtle"></div>
+        <span class="px-3 text-[10px] uppercase font-bold text-text-tertiary">Atau Akses Darurat</span>
+        <div class="flex-1 border-t border-border-subtle"></div>
+      </div>
+
+      <!-- Emergency Backdoor Section (gas-rahasia-script-properties) -->
+      <div class="w-full flex flex-col gap-2.5 bg-background-alt p-4 rounded-2xl border border-border-subtle text-left">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-text-primary flex items-center gap-1">
+            <span class="material-symbols-outlined text-[16px] text-amber-600">lock_open</span>
+            Laluan Darurat (Emergency Backdoor)
+          </span>
+          <span class="text-[10px] text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full font-bold">Dilindungi Hash</span>
+        </div>
+
+        <p class="text-[11px] text-text-secondary leading-normal">
+          Gunakan sekiranya Google OAuth mengalami gangguan atau semasa mod offline (Kunci lalai: <span class="font-mono font-bold text-primary">bigz2026</span>).
+        </p>
+
+        <div class="flex gap-2 mt-1">
+          <input id="emergency-pin-input" 
+                 type="password" 
+                 placeholder="Masukkan Kunci Sandi Darurat" 
+                 class="flex-1 h-10 px-3 bg-white rounded-xl text-xs border border-border-subtle focus:outline-none focus:ring-2 focus:ring-primary-container">
+          <button onclick="handleEmergencyAdminLogin()" class="px-4 h-10 rounded-xl bg-primary text-white font-bold text-xs hover:bg-primary-dark transition-all">
+            Akses
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. VIEW: ADMIN MANAGEMENT CONSOLE (DASHBOARD & VERIFIKASI)            -->
+  <!-- ===================================================================== -->
+  <section id="view-admin_portal" class="hidden flex-1 w-full bg-slate-50 min-h-screen flex flex-col md:flex-row">
+    <!-- Admin Sidebar (Desktop & Mobile Drawer) -->
+    <aside class="w-full md:w-64 bg-slate-900 text-white p-4 flex flex-col justify-between shrink-0">
+      <div class="flex flex-col gap-6">
+        <!-- Brand -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-[18px] fill">eco</span>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-[15px] leading-none">The Bigz Crochet</h3>
+              <span class="text-[10px] text-slate-400">Admin Console</span>
+            </div>
+          </div>
+          <button onclick="switchView('catalog')" class="md:hidden text-slate-400 hover:text-white">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="flex md:flex-col gap-1 overflow-x-auto md:overflow-visible">
+          <button id="admin-nav-dashboard" onclick="switchAdminTab('dashboard')" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold bg-primary-container text-white shrink-0">
+            <span class="material-symbols-outlined text-[18px]">dashboard</span>
+            <span>Dashboard & Metrik</span>
+          </button>
+          <button id="admin-nav-orders" onclick="switchAdminTab('orders')" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 shrink-0">
+            <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+            <span>Pesanan & Bukti Bayar</span>
+          </button>
+          <button id="admin-nav-products" onclick="switchAdminTab('products')" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 shrink-0">
+            <span class="material-symbols-outlined text-[18px]">inventory_2</span>
+            <span>Inventori Produk</span>
+          </button>
+          <button id="admin-nav-settings" onclick="switchAdminTab('settings')" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:bg-slate-800 shrink-0">
+            <span class="material-symbols-outlined text-[18px]">settings</span>
+            <span>Tetapan Kedai & Rahsia</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Logout / Switch to Shop -->
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2 mt-4">
+        <button onclick="switchView('catalog')" class="flex items-center gap-2 text-xs text-slate-400 hover:text-white py-1">
+          <span class="material-symbols-outlined text-[16px]">storefront</span>
+          <span>Lihat Kedai Pelanggan</span>
+        </button>
+        <button onclick="adminLogout()" class="flex items-center gap-2 text-xs text-rose-400 hover:text-rose-300 py-1">
+          <span class="material-symbols-outlined text-[16px]">logout</span>
+          <span>Log Keluar Admin</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Admin Main Content Area -->
+    <main class="flex-1 p-4 md:p-8 overflow-y-auto">
+      
+      <!-- TAB 1: DASHBOARD & METRIK JUALAN -->
+      <div id="admin-tab-dashboard" class="flex flex-col gap-6">
+        <div>
+          <h2 class="font-extrabold text-[22px] text-text-primary">Dashboard Prestasi Jualan</h2>
+          <p class="text-xs text-text-secondary mt-0.5">Analisis pesanan harian dan status inventori The Bigz Crochet.</p>
+        </div>
+
+        <!-- 4 KPI Metric Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 md:gap-5">
+          <div class="card-soft p-4 flex flex-col">
+            <span class="text-xs text-text-secondary font-medium">Jumlah Hasil Jualan</span>
+            <span id="stat-total-revenue" class="text-xl md:text-2xl font-extrabold text-primary mt-1">RM 0.00</span>
+            <span class="text-[10px] text-emerald-600 font-semibold mt-1">▲ Prestasi Semasa</span>
+          </div>
+          <div class="card-soft p-4 flex flex-col">
+            <span class="text-xs text-text-secondary font-medium">Menunggu Pengesahan</span>
+            <span id="stat-pending-orders" class="text-xl md:text-2xl font-extrabold text-amber-600 mt-1">0</span>
+            <span class="text-[10px] text-amber-700 font-semibold mt-1">Perlu semak slip bayaran</span>
+          </div>
+          <div class="card-soft p-4 flex flex-col">
+            <span class="text-xs text-text-secondary font-medium">Pesanan Terverifikasi</span>
+            <span id="stat-verified-orders" class="text-xl md:text-2xl font-extrabold text-emerald-600 mt-1">0</span>
+            <span class="text-[10px] text-text-secondary mt-1">Sedia untuk dipos</span>
+          </div>
+          <div class="card-soft p-4 flex flex-col">
+            <span class="text-xs text-text-secondary font-medium">Produk Aktif</span>
+            <span id="stat-active-products" class="text-xl md:text-2xl font-extrabold text-text-primary mt-1">0</span>
+            <span class="text-[10px] text-text-secondary mt-1">Dalam katalog</span>
+          </div>
+        </div>
+
+        <!-- Visual Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+          <div class="card-soft p-5 lg:col-span-2 flex flex-col">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-text-secondary mb-3">Trend Jualan 7 Hari Lepas (RM)</h4>
+            <div class="h-60 w-full">
+              <canvas id="chart-daily-sales"></canvas>
+            </div>
+          </div>
+          <div class="card-soft p-5 flex flex-col">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-text-secondary mb-3">Jualan Mengikut Kategori</h4>
+            <div class="h-60 w-full">
+              <canvas id="chart-category-sales"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Pesanan Terkini -->
+        <div class="card-soft p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-bold text-sm text-text-primary">Pesanan Terkini Memerlukan Tindakan</h4>
+            <button onclick="switchAdminTab('orders')" class="text-xs font-bold text-primary hover:underline">Lihat Semua</button>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="text-[11px] uppercase tracking-wider text-text-secondary border-b border-border-subtle">
+                  <th class="pb-2 px-3">No. Pesanan</th>
+                  <th class="pb-2 px-3">Pelanggan</th>
+                  <th class="pb-2 px-3">Jumlah</th>
+                  <th class="pb-2 px-3">Status</th>
+                  <th class="pb-2 px-3 text-right">Tindakan</th>
+                </tr>
+              </thead>
+              <tbody id="admin-recent-orders-table">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: SENARAI PESANAN & VERIFIKASI RESIT -->
+      <div id="admin-tab-orders" class="hidden flex flex-col gap-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h2 class="font-extrabold text-[22px] text-text-primary">Pengesahan Bukti Pembayaran</h2>
+            <p class="text-xs text-text-secondary mt-0.5">Semak slip bayaran pelanggan, sahkan status, dan kirim invois WhatsApp secara automatik.</p>
+          </div>
+        </div>
+
+        <div class="card-soft p-4 flex flex-col">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="text-[11px] uppercase tracking-wider text-text-secondary border-b border-border-subtle">
+                  <th class="py-2.5 px-3">ID</th>
+                  <th class="py-2.5 px-3">Tarikh</th>
+                  <th class="py-2.5 px-3">Nama</th>
+                  <th class="py-2.5 px-3">WhatsApp</th>
+                  <th class="py-2.5 px-3">Jumlah</th>
+                  <th class="py-2.5 px-3">Kaedah</th>
+                  <th class="py-2.5 px-3">Status</th>
+                  <th class="py-2.5 px-3 text-right">Tindakan</th>
+                </tr>
+              </thead>
+              <tbody id="admin-orders-table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: PENGURUSAN INVENTORI PRODUK (CRUD) -->
+      <div id="admin-tab-products" class="hidden flex flex-col gap-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h2 class="font-extrabold text-[22px] text-text-primary">Pengurusan Inventori Produk</h2>
+            <p class="text-xs text-text-secondary mt-0.5">Tambah barangan rajut baharu, ubah harga, dan kemaskini stok.</p>
+          </div>
+          <button onclick="openAddProductModal()" class="px-4 py-2.5 rounded-xl bg-primary-container text-white font-bold text-xs flex items-center gap-1.5 shadow-md hover:bg-primary-dark transition-all self-start sm:self-auto">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+            <span>Tambah Produk Baharu</span>
+          </button>
+        </div>
+
+        <div class="card-soft p-4 flex flex-col">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="text-[11px] uppercase tracking-wider text-text-secondary border-b border-border-subtle">
+                  <th class="py-2.5 px-3">Imej</th>
+                  <th class="py-2.5 px-3">Nama & Kategori</th>
+                  <th class="py-2.5 px-3">Harga</th>
+                  <th class="py-2.5 px-3">Stok</th>
+                  <th class="py-2.5 px-3">Status</th>
+                  <th class="py-2.5 px-3 text-right">Tindakan</th>
+                </tr>
+              </thead>
+              <tbody id="admin-products-table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: TETAPAN KEDAI & KUNCI RAHSIA (gas-rahasia-script-properties) -->
+      <div id="admin-tab-settings" class="hidden flex flex-col gap-6 max-w-3xl">
+        <div>
+          <h2 class="font-extrabold text-[22px] text-text-primary">Tetapan Kedai & Kunci Rahsia</h2>
+          <p class="text-xs text-text-secondary mt-0.5">Konfigurasi akaun bank penerima, token WhatsApp Gateway, dan kata laluan darurat.</p>
+        </div>
+
+        <div class="card-soft p-5 md:p-6 flex flex-col gap-4">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-primary">1. Profil Kedai</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div>
+              <label class="text-xs font-semibold text-text-primary block mb-1">Nama Kedai</label>
+              <input id="setting-store-name" type="text" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-text-primary block mb-1">No. WhatsApp Notifikasi Admin</label>
+              <input id="setting-admin-wa" type="text" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+            </div>
+          </div>
+
+          <h4 class="font-bold text-xs uppercase tracking-wider text-primary mt-2">2. Akaun Bank & DuitNow QR</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div>
+              <label class="text-xs font-semibold text-text-primary block mb-1">Nama Bank</label>
+              <input id="setting-bank-name" type="text" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-text-primary block mb-1">No. Akaun Bank</label>
+              <input id="setting-bank-acc" type="text" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-text-primary block mb-1">Nama Pemegang Akaun</label>
+              <input id="setting-bank-holder" type="text" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+            </div>
+          </div>
+          <div>
+            <label class="text-xs font-semibold text-text-primary block mb-1">URL Imej QR Bank (DuitNow / QRIS)</label>
+            <input id="setting-bank-qr" type="text" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+          </div>
+
+          <h4 class="font-bold text-xs uppercase tracking-wider text-primary mt-2">3. Kunci Rahsia (Script Properties)</h4>
+          <div>
+            <label class="text-xs font-semibold text-text-primary block mb-1">Fonnte WhatsApp Token (API Key)</label>
+            <input id="setting-fonnte-token" type="password" placeholder="Masukkan token jika ingin tukar" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+            <span class="text-[10px] text-text-secondary mt-0.5 block">Disimpan selamat dalam Script Properties (tidak terdedah kepada pelawat).</span>
+          </div>
+
+          <div>
+            <label class="text-xs font-semibold text-text-primary block mb-1">Tukar Kunci Sandi Darurat (Emergency PIN)</label>
+            <input id="setting-emergency-pin" type="password" placeholder="Biarkan kosong jika tidak mahu tukar" class="w-full h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+          </div>
+
+          <button onclick="saveAdminSettings()" class="mt-4 px-6 py-2.5 rounded-xl bg-primary-container text-white font-bold text-xs hover:bg-primary-dark transition-all self-start shadow-sm">
+            Simpan Semua Tetapan
+          </button>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: DETAIL PRODUK (Slide-up / Pop-up)                              -->
+  <!-- ===================================================================== -->
+  <div id="product-detail-modal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 modal-overlay">
+    <div class="bg-white w-full max-w-lg rounded-t-[32px] sm:rounded-[28px] overflow-hidden shadow-2xl modal-sheet flex flex-col max-h-[90vh]">
+      <!-- Image Hero with Close -->
+      <div class="relative w-full h-[280px] bg-slate-100 overflow-hidden shrink-0">
+        <img id="modal-detail-img" src="" alt="Product Detail" class="w-full h-full object-cover">
+        <button onclick="closeProductDetail()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 shadow-md flex items-center justify-center text-text-secondary hover:text-text-primary">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Info Area -->
+      <div class="p-5 overflow-y-auto flex-1 flex flex-col gap-3">
+        <div>
+          <span id="modal-detail-category" class="text-[11px] font-bold text-primary uppercase tracking-wider"></span>
+          <h3 id="modal-detail-title" class="text-[20px] font-extrabold text-text-primary mt-0.5"></h3>
+          <span id="modal-detail-price" class="text-[20px] font-extrabold text-primary-dark mt-1 block"></span>
+        </div>
+
+        <p id="modal-detail-desc" class="text-xs text-text-secondary leading-relaxed"></p>
+
+        <!-- Specs Chips -->
+        <div id="modal-detail-specs" class="flex flex-wrap gap-2 pt-1">
+          <!-- Dynamically inserted -->
+        </div>
+
+        <!-- Stepper Row -->
+        <div class="flex items-center justify-between pt-3 border-t border-border-subtle mt-2">
+          <span class="text-xs font-bold text-text-primary">Pilih Kuantiti:</span>
+          <div class="flex items-center gap-3 bg-surface-container-low px-3 py-1.5 rounded-full border border-border-subtle shadow-inner">
+            <button onclick="changeDetailQty(-1)" class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-text-secondary hover:text-text-primary shadow-sm active:scale-90">
+              <span class="material-symbols-outlined text-[16px]">remove</span>
+            </button>
+            <span id="modal-detail-qty" class="font-bold text-sm w-6 text-center">1</span>
+            <button onclick="changeDetailQty(1)" class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-text-secondary hover:text-text-primary shadow-sm active:scale-90">
+              <span class="material-symbols-outlined text-[16px]">add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="p-4 bg-surface border-t border-border-subtle">
+        <button onclick="confirmAddDetailToCart()" class="w-full h-12 rounded-full bg-primary-container text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-primary-dark active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+          <span id="modal-detail-cta-text">Tambah ke Troli</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: TROLI BELANJA (My Shopping Cart Sheet)                         -->
+  <!-- ===================================================================== -->
+  <div id="cart-modal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 modal-overlay">
+    <div class="bg-white w-full max-w-lg rounded-t-[32px] sm:rounded-[28px] overflow-hidden shadow-2xl modal-sheet flex flex-col max-h-[90vh]">
+      <!-- Header -->
+      <div class="p-4 px-5 flex items-center justify-between border-b border-border-subtle">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[22px]">shopping_bag</span>
+          <h3 class="font-extrabold text-[16px] text-text-primary">Troli Belanjaan Anda</h3>
+        </div>
+        <button onclick="closeCartModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-text-secondary">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cart-items-container" class="p-4 overflow-y-auto flex-1 flex flex-col gap-2.5 max-h-[350px]">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Promo Code & Bill Breakdown -->
+      <div class="p-4 bg-background-alt border-t border-border-subtle flex flex-col gap-3">
+        <!-- Promo Code Input -->
+        <div class="flex gap-2">
+          <input id="cart-promo-input" type="text" placeholder="Kod Promosi (cth: BIGZ10)" class="flex-1 h-9 px-3 rounded-full text-xs border border-border-subtle uppercase">
+          <button onclick="applyPromoCode()" class="px-4 h-9 rounded-full bg-slate-800 text-white font-bold text-xs hover:bg-black">Guna</button>
+        </div>
+
+        <div class="flex flex-col gap-1 text-xs text-text-secondary pt-1">
+          <div class="flex justify-between">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal-text" class="font-bold text-text-primary">RM 0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Anggaran Penghantaran:</span>
+            <span id="cart-shipping-text" class="font-bold text-text-primary">RM 8.00</span>
+          </div>
+          <div class="flex justify-between text-primary">
+            <span>Diskaun:</span>
+            <span id="cart-discount-text" class="font-bold">-RM 0.00</span>
+          </div>
+          <div class="flex justify-between text-sm font-extrabold text-text-primary pt-2 border-t border-border-subtle">
+            <span>Jumlah Keseluruhan:</span>
+            <span id="cart-total-text" class="text-primary-dark">RM 0.00</span>
+          </div>
+        </div>
+
+        <button id="cart-checkout-btn" onclick="proceedToCheckout()" class="w-full h-12 rounded-full bg-primary-container text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-primary-dark active:scale-95 transition-all">
+          <span>Teruskan ke Checkout</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: CHECKOUT & PEMBAYARAN (FPX / BANK QR & SLIP UPLOAD)            -->
+  <!-- ===================================================================== -->
+  <div id="checkout-modal" class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 modal-overlay">
+    <div class="bg-white w-full max-w-lg rounded-t-[32px] sm:rounded-[28px] overflow-hidden shadow-2xl modal-sheet flex flex-col max-h-[92vh]">
+      <!-- Header -->
+      <div class="p-4 px-5 flex items-center justify-between border-b border-border-subtle">
+        <h3 class="font-extrabold text-[16px] text-text-primary">Lengkapkan Pembelian & Bayaran</h3>
+        <button onclick="closeCheckoutModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-text-secondary">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Form Body -->
+      <div class="p-5 overflow-y-auto flex-1 flex flex-col gap-4">
+        <!-- Ringkasan Ringkas -->
+        <div class="p-3 bg-secondary-container/50 rounded-2xl flex items-center justify-between text-xs">
+          <div>
+            <span class="text-text-secondary block">Ringkasan Item:</span>
+            <span id="checkout-items-summary" class="font-bold text-text-primary"></span>
+          </div>
+          <div class="text-right">
+            <span class="text-text-secondary block">Jumlah Bayaran:</span>
+            <span id="checkout-grand-total" class="font-extrabold text-primary text-base"></span>
+          </div>
+        </div>
+
+        <!-- 1. Maklumat Pelanggan -->
+        <div class="flex flex-col gap-2.5">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-text-secondary">1. Maklumat Penerima</h4>
+          <input id="checkout-name" type="text" placeholder="Nama Penuh Anda *" class="w-full h-10 px-3.5 rounded-xl border border-border-subtle text-xs bg-background-alt">
+          <input id="checkout-wa" type="tel" placeholder="Nombor WhatsApp (Cth: 0128889999) *" class="w-full h-10 px-3.5 rounded-xl border border-border-subtle text-xs bg-background-alt">
+          <textarea id="checkout-address" rows="2" placeholder="Alamat Penuh Penghantaran & Poskod *" class="w-full p-3 rounded-xl border border-border-subtle text-xs bg-background-alt resize-none"></textarea>
+          <input id="checkout-notes" type="text" placeholder="Nota Pilihan Warna Benang (Pilihan)" class="w-full h-10 px-3.5 rounded-xl border border-border-subtle text-xs bg-background-alt">
+        </div>
+
+        <!-- 2. Kaedah Pembayaran -->
+        <div class="flex flex-col gap-2.5">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-text-secondary">2. Kaedah Pembayaran</h4>
+          
+          <div class="grid grid-cols-2 gap-2">
+            <!-- Pilihan FPX -->
+            <label onclick="switchPaymentMethod('FPX_TRANSFER')" class="flex flex-col p-3 rounded-xl border-2 border-primary-container bg-surface-container-low cursor-pointer">
+              <div class="flex items-center gap-1.5">
+                <input id="pay-method-fpx" type="radio" name="pay_method" value="FPX_TRANSFER" checked class="text-primary-container">
+                <span class="font-bold text-xs text-text-primary">Online Banking / FPX</span>
+              </div>
+            </label>
+
+            <!-- Pilihan DuitNow QR -->
+            <label onclick="switchPaymentMethod('BANK_QR')" class="flex flex-col p-3 rounded-xl border-2 border-border-subtle bg-surface-container-low cursor-pointer">
+              <div class="flex items-center gap-1.5">
+                <input id="pay-method-qr" type="radio" name="pay_method" value="BANK_QR" class="text-primary-container">
+                <span class="font-bold text-xs text-text-primary">DuitNow Bank QR</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- FPX Details -->
+          <div id="payment-fpx-details" class="p-3.5 rounded-2xl bg-slate-50 border border-border-subtle flex flex-col gap-1.5 text-xs">
+            <span class="text-text-secondary">Sila buat pindahan perbankan ke akaun rasmi kami:</span>
+            <div class="flex items-center justify-between font-bold text-text-primary pt-1">
+              <span id="checkout-bank-name">Maybank</span>
+              <button onclick="copyBankAccount()" class="text-primary hover:underline text-[11px] flex items-center gap-0.5">
+                <span class="material-symbols-outlined text-[14px]">content_copy</span>
+                Salin No. Akaun
+              </button>
+            </div>
+            <div id="checkout-bank-acc" class="font-mono text-sm font-extrabold text-primary-dark"></div>
+            <div id="checkout-bank-holder" class="text-text-secondary text-[11px]"></div>
+          </div>
+
+          <!-- QR Details -->
+          <div id="payment-qr-details" class="hidden p-4 rounded-2xl bg-slate-50 border border-border-subtle flex flex-col items-center text-center gap-2">
+            <span class="text-xs text-text-secondary">Imbas kod QR di bawah dengan mana-mana aplikasi perbankan anda:</span>
+            <img id="checkout-qr-img" src="" alt="DuitNow QR" class="w-44 h-44 rounded-xl border border-border-subtle bg-white p-2 shadow-sm">
+            <span class="text-[11px] text-text-tertiary">Sokong Maybank, CIMB, Bank Islam, TnG eWallet & semua bank</span>
+          </div>
+        </div>
+
+        <!-- 3. Muat Naik Bukti Bayaran (Slip Transfer) -->
+        <div class="flex flex-col gap-2">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-text-secondary">3. Bukti Pembayaran</h4>
+          
+          <div id="slip-upload-placeholder" class="border-2 border-dashed border-border-subtle hover:border-primary-container rounded-2xl p-4 text-center bg-background-alt cursor-pointer relative">
+            <input id="slip-file-input" type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer">
+            <span class="material-symbols-outlined text-primary text-[28px]">cloud_upload</span>
+            <p class="text-xs font-bold text-text-primary mt-1">Sentuh untuk muat naik slip / tangkapan skrin bayaran</p>
+            <p class="text-[10px] text-text-secondary">Format JPG atau PNG (Disarankan)</p>
+          </div>
+
+          <!-- Preview Resit -->
+          <div id="slip-preview-container" class="hidden flex items-center justify-between p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
+            <div class="flex items-center gap-2">
+              <img id="slip-preview-img" src="" alt="Slip Preview" class="w-10 h-10 rounded-lg object-cover">
+              <span class="text-xs font-semibold text-emerald-800">Resit bayaran sedia dihantar!</span>
+            </div>
+            <button onclick="removeUploadedSlip()" class="text-rose-600 hover:text-rose-800 text-xs font-bold p-1">Padam</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="p-4 bg-surface border-t border-border-subtle">
+        <button id="checkout-submit-btn" onclick="submitOrder()" class="w-full h-12 rounded-full bg-primary-container text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-primary-dark active:scale-95 transition-all">
+          <span>Hantar Pesanan & Dapatkan Invois</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: PENGESAHAN KEJAYAAN PESANAN & INVOIS WHATSAPP                   -->
+  <!-- ===================================================================== -->
+  <div id="confirmation-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+    <div class="bg-white w-full max-w-sm rounded-[28px] p-6 text-center shadow-2xl modal-sheet flex flex-col items-center gap-3">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mb-1">
+        <span class="material-symbols-outlined text-[36px] fill">check_circle</span>
+      </div>
+
+      <h3 class="font-extrabold text-[20px] text-text-primary">Pesanan Diterima!</h3>
+      <p class="text-xs text-text-secondary">Terima kasih kerana menyokong hasil kraftangan rajutan tempatan The Bigz Crochet.</p>
+
+      <div class="w-full p-3 rounded-2xl bg-slate-50 border border-border-subtle text-left text-xs flex flex-col gap-1 my-1">
+        <div class="flex justify-between">
+          <span class="text-text-secondary">No. Pesanan:</span>
+          <span id="confirm-order-id" class="font-bold text-text-primary"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-text-secondary">Jumlah Bayaran:</span>
+          <span id="confirm-order-total" class="font-extrabold text-primary"></span>
+        </div>
+      </div>
+
+      <div class="p-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-left text-[11px] text-emerald-900 flex items-start gap-2">
+        <span class="material-symbols-outlined text-emerald-600 text-[18px] shrink-0 mt-0.5">chat</span>
+        <div>
+          <span class="font-bold">Notifikasi WhatsApp Dihantar:</span>
+          <p class="mt-0.5 text-emerald-800">Invois rasmi dan kemaskini pesanan akan dihantar ke WhatsApp <span id="confirm-wa-number" class="font-bold"></span>.</p>
+        </div>
+      </div>
+
+      <div class="w-full flex flex-col gap-2 mt-2">
+        <button onclick="downloadCurrentOrderInvoice()" class="w-full h-11 rounded-full bg-primary text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm hover:bg-primary-dark">
+          <span class="material-symbols-outlined text-[18px]">download</span>
+          <span>Muat Turun Resit Invois PDF</span>
+        </button>
+
+        <button onclick="closeConfirmationModal(); switchView('catalog');" class="w-full h-10 rounded-full border border-border-subtle text-text-secondary font-semibold text-xs hover:bg-slate-50">
+          Kembali ke Kedai
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL ADMIN: VERIFIKASI RESIT BAYARAN (SPLIT SCREEN 50/50)            -->
+  <!-- ===================================================================== -->
+  <div id="admin-verification-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 modal-overlay">
+    <div class="bg-white w-full max-w-4xl rounded-[28px] overflow-hidden shadow-2xl modal-sheet flex flex-col max-h-[95vh]">
+      <!-- Modal Header -->
+      <div class="p-4 px-6 flex items-center justify-between border-b border-border-subtle bg-slate-50">
+        <div>
+          <span class="text-[11px] font-bold text-primary uppercase">Semakan Bayaran Pelanggan</span>
+          <h3 id="verify-order-id" class="font-extrabold text-lg text-text-primary"></h3>
+        </div>
+        <button onclick="closeVerificationModal()" class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-text-secondary">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Split Screen Layout (Left: Slip Viewer, Right: Order Metadata & Action) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 flex-1 overflow-y-auto">
+        <!-- Left Panel: Slip Viewer -->
+        <div class="p-5 bg-slate-100 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-border-subtle min-h-[300px]">
+          <img id="verify-slip-img" src="" alt="Slip Transfer" class="max-h-[380px] w-auto rounded-xl shadow-md object-contain border border-white">
+          <div id="verify-no-slip" class="hidden flex flex-col items-center text-text-secondary text-xs">
+            <span class="material-symbols-outlined text-[36px]">image_not_supported</span>
+            <p class="mt-1">Tiada slip bayaran dimuat naik pelanggan</p>
+          </div>
+        </div>
+
+        <!-- Right Panel: Order Details & Status Changer -->
+        <div class="p-6 flex flex-col justify-between gap-4">
+          <div class="flex flex-col gap-3">
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div>
+                <span class="text-text-secondary block">Pelanggan:</span>
+                <span id="verify-customer-name" class="font-bold text-text-primary text-sm"></span>
+              </div>
+              <div>
+                <span class="text-text-secondary block">Jumlah Bayaran:</span>
+                <span id="verify-total-amount" class="font-extrabold text-primary text-base"></span>
+              </div>
+            </div>
+
+            <div class="text-xs">
+              <span class="text-text-secondary block">WhatsApp:</span>
+              <div class="flex items-center gap-2 mt-0.5">
+                <span id="verify-customer-wa" class="font-semibold text-text-primary"></span>
+                <a id="verify-wa-btn" href="#" target="_blank" class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[10px] hover:bg-emerald-200 flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]">chat</span> Chat WA
+                </a>
+              </div>
+            </div>
+
+            <div class="text-xs">
+              <span class="text-text-secondary block">Alamat Penghantaran:</span>
+              <p id="verify-shipping-address" class="text-text-primary font-medium mt-0.5"></p>
+            </div>
+
+            <!-- Ordered Items List -->
+            <div class="text-xs pt-2 border-t border-border-subtle">
+              <span class="font-bold text-text-primary block mb-1">Item Ditempah:</span>
+              <ul id="verify-items-list" class="space-y-1"></ul>
+            </div>
+
+            <!-- Status Changer -->
+            <div class="pt-2 border-t border-border-subtle flex flex-col gap-1.5">
+              <label class="text-xs font-bold text-text-primary">Tukar Status Pesanan:</label>
+              <select id="verify-status-select" class="h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt font-semibold">
+                <option value="Pending">Pending (Menunggu Bayaran)</option>
+                <option value="Terverifikasi">Terverifikasi (Bayaran Diterima)</option>
+                <option value="Proses_Rajut">Proses Mengait / Packing</option>
+                <option value="Dikirim">Telah Dipos (In Transit)</option>
+                <option value="Selesai">Selesai</option>
+                <option value="Batal">Batal</option>
+              </select>
+            </div>
+
+            <input id="verify-admin-note" type="text" placeholder="Catatan untuk pelanggan (Pilihan)" class="h-10 px-3 rounded-xl border border-border-subtle text-xs bg-background-alt">
+          </div>
+
+          <button onclick="confirmVerifyOrder()" class="w-full h-12 rounded-xl bg-primary text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md hover:bg-primary-dark transition-all">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span>Sahkan Bayaran & Pemicu Invois WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL ADMIN: FORM TAMBAH / UBAH PRODUK                                -->
+  <!-- ===================================================================== -->
+  <div id="admin-product-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 modal-overlay">
+    <div class="bg-white w-full max-w-md rounded-[28px] p-6 shadow-2xl modal-sheet flex flex-col gap-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-extrabold text-[16px] text-text-primary">Maklumat Produk Crochet</h3>
+        <button onclick="closeProductFormModal()" class="text-text-secondary hover:text-text-primary">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <input id="product-form-id" type="hidden">
+      
+      <div class="flex flex-col gap-3 text-xs">
+        <div>
+          <label class="font-semibold text-text-primary block mb-1">Nama Produk *</label>
+          <input id="product-form-name" type="text" placeholder="Contoh: Daisy Blossom Tote Bag" class="w-full h-10 px-3 rounded-xl border border-border-subtle bg-background-alt">
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-semibold text-text-primary block mb-1">Kategori</label>
+            <select id="product-form-category" class="w-full h-10 px-3 rounded-xl border border-border-subtle bg-background-alt">
+              <option value="Bags">Bags (Beg)</option>
+              <option value="Amigurumi">Amigurumi (Boneka)</option>
+              <option value="Wearables">Wearables (Pakaian/Topi)</option>
+              <option value="Accessories">Accessories (Aksesori)</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-semibold text-text-primary block mb-1">Harga (RM) *</label>
+            <input id="product-form-price" type="number" step="0.5" placeholder="65.00" class="w-full h-10 px-3 rounded-xl border border-border-subtle bg-background-alt font-bold text-primary">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="font-semibold text-text-primary block mb-1">Kuantiti Stok</label>
+            <input id="product-form-stock" type="number" value="10" class="w-full h-10 px-3 rounded-xl border border-border-subtle bg-background-alt">
+          </div>
+          <div>
+            <label class="font-semibold text-text-primary block mb-1">URL Imej Produk</label>
+            <input id="product-form-image" type="text" placeholder="https://..." class="w-full h-10 px-3 rounded-xl border border-border-subtle bg-background-alt">
+          </div>
+        </div>
+
+        <div>
+          <label class="font-semibold text-text-primary block mb-1">Penerangan & Spesifikasi Benang</label>
+          <textarea id="product-form-desc" rows="3" placeholder="Saiz, jenis benang kapas, kaedah cucian..." class="w-full p-3 rounded-xl border border-border-subtle bg-background-alt resize-none"></textarea>
+        </div>
+      </div>
+
+      <div class="flex gap-2 pt-2">
+        <button onclick="closeProductFormModal()" class="flex-1 h-10 rounded-xl border border-border-subtle text-text-secondary font-semibold text-xs">
+          Batal
+        </button>
+        <button onclick="saveProductFromForm()" class="flex-1 h-10 rounded-xl bg-primary-container text-white font-bold text-xs hover:bg-primary-dark">
+          Simpan Produk
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING BOTTOM DOCK NAVIGATION (Customer Mobile Commerce Dock)       -->
+  <!-- ===================================================================== -->
+  <nav id="floating-bottom-dock" class="fixed bottom-4 inset-x-0 mx-auto w-[92%] max-w-md h-16 rounded-full floating-dock z-40 flex items-center justify-around px-4">
+    <!-- Home / Catalog -->
+    <button id="nav-btn-home" onclick="switchView('catalog')" class="flex flex-col items-center justify-center text-primary-container font-bold transition-all">
+      <span class="material-symbols-outlined text-[24px]">storefront</span>
+      <span class="text-[10px] mt-0.5">Katalog</span>
+    </button>
+
+    <!-- Elevated Floating Center Cart Button -->
+    <div class="relative -top-5">
+      <button onclick="openCartModal()" 
+              aria-label="Troli Belanjaan" 
+              class="w-14 h-14 rounded-full bg-primary-container text-white flex items-center justify-center shadow-[0_6px_20px_rgba(16,185,129,0.4)] hover:bg-primary-dark active:scale-90 transition-transform pulse-glow">
+        <span class="material-symbols-outlined text-[26px]">shopping_bag</span>
+        <!-- Notification Counter Badge -->
+        <span id="cart-floating-badge" class="hidden absolute top-0 -right-1 w-5 h-5 rounded-full bg-rose-600 text-white font-extrabold text-[11px] flex items-center justify-center ring-2 ring-white">
+          0
+        </span>
+      </button>
+    </div>
+
+    <!-- My Orders Tracker -->
+    <button id="nav-btn-orders" onclick="switchView('orders')" class="flex flex-col items-center justify-center text-text-secondary hover:text-text-primary transition-all">
+      <span class="material-symbols-outlined text-[24px]">receipt_long</span>
+      <span class="text-[10px] mt-0.5">Pesanan</span>
+    </button>
+  </nav>
+
+  <!-- Pustaka Logik Klien -->
+  <script src="js/config.js"></script>
+  <script src="js/pdf-receipt.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
